@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+
+
+
+</head>
+<body>
+<script type="text/javascript">
+    function getUsers(){
+        setTimeout(()=>{
+            let data = '用户数据';
+        // 调用Next方法，并且将数据传入
+        iterator.next(data);    
+    },1000);
+    }
+
+    function getOrders(){
+        setTimeout(()=>{
+            let data = '顶顶那数据';
+        iterator.next(data);
+        },1000);
+    }
+
+    function getGoods(){
+        setTimeout(()=>{
+            let data = '商品数据';
+            iterator.next(data);
+        },1000);
+    }
+
+    function * gen(){
+       let users = yield getUsers();
+       console.log(users); 
+      let orders= yield getOrders();
+       console.log(orders);
+      let goods =  yield getGoods();
+        console.log(goods);
+    }
+
+    let iterator= gen();
+    iterator.next();
+
+
+</script>
+
+</body>
+
+
+
+
+</html>

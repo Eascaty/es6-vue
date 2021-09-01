@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+
+
+
+</head>
+<body>
+<script type="text/javascript">
+    function * gen(arg){
+        console.log(arg)
+           let one = yield 111;
+           console.log(one);
+            yield 222;
+            yield 333;
+    }
+
+    // 执行获取迭代器对象
+    let iterator = gen('AAA');
+    // next方法可以传入实参
+    console.log(iterator.next());
+    console.log(iterator.next('BBB'));
+    console.log(iterator.next('CCC'));
+    // console.log(iterator.next());
+    
+
+</script>
+
+</body>
+
+
+
+
+</html>

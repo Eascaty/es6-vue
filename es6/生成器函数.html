@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+
+
+
+</head>
+<body>
+<script type="text/javascript">
+    // 生成器其实就是一个特殊函数
+    // 异步编程 纯回调函数
+    function * gen(){
+        // console.log(111);
+    yield '一只没有耳朵';
+    // console.log(222);
+    yield '一只没有尾巴';
+    // console.log(333);    
+    yield '真奇怪';
+}
+  
+    let iterator = gen();
+    // console.log(iterator);
+    console.log(iterator.next());
+    console.log(iterator.next());  
+    console.log(iterator.next());
+    console.log(iterator.next());
+    
+
+    // 遍历
+    // for(let v of gen()){
+    //     console.log(v);
+    // }
+
+</script>
+
+</body>
+
+
+
+
+</html>

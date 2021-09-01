@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+
+
+
+</head>
+<body>
+<script type="text/javascript">
+var obj = {username:'kobe'};
+function foo(data){
+    console.log(this,data);
+}
+// foo.call(obj);
+// foo.apply(obj,[33]);
+
+
+foo.bind(obj,33)();
+setTimeout(function(){
+    console.log(this);
+}.bind(obj),1000)
+</script>
+
+</body>
+
+
+
+
+</html>

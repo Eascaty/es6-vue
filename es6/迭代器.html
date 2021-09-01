@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+
+
+
+</head>
+<body>
+<script type="text/javascript">
+
+const xiyou = ['唐僧','孙悟空','猪八戒','沙僧'];
+
+// 使用 for..of遍历数组
+// for(let v of xiyou){
+//     console.log(v);
+// }
+let iterator = xiyou[Symbol.iterator]();
+
+// 调用对象的next方法
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+
+
+
+
+</script>
+
+</body>
+
+
+
+
+</html>
